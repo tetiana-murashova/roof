@@ -24,6 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -42,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601522945837</updated>
       <workItem from="1601522947250" duration="1984000" />
-      <workItem from="1601524983003" duration="5448000" />
+      <workItem from="1601524983003" duration="17959000" />
     </task>
     <servers />
   </component>

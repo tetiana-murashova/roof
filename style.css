@@ -15,6 +15,7 @@
 }
 a {
     text-decoration: none;
+    color: black;
 }
 
 html,
@@ -36,10 +37,24 @@ body {
 
 
 /* nav */
+.first-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    background-color: white;
+    height: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
 
-/* Add a black background color to the top navigation */
+.first-nav i {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
 .topnav {
     position: fixed;
+    top: 20px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -51,7 +66,6 @@ body {
     align-items: center;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
     display: inline-block;
     color: #f2f2f2;
@@ -61,25 +75,20 @@ body {
     font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
     background-color: var(--light-color);
     color: black;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: var(--second-color);
     color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
 }
 
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     .topnav a {display: none;}
     .topnav a.icon {
@@ -88,7 +97,6 @@ body {
     }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
@@ -109,7 +117,6 @@ body {
         right:50px;
     }
 }
-
 
 /* end of nav */
 
@@ -136,21 +143,18 @@ body {
     opacity: 0.5;
 }
 
-
-
 .banner h1 {
     font-family: "Baloo Da 2", serif;
     font-size: 5rem;
     font-weight: 300;
     color: #fff;
-    width: 50%;
+    width: 60%;
     line-height: 5rem;
     letter-spacing: 0.2rem;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     animation-name: anim;
     animation-duration: 2s;
 }
-
 
 .banner {
     position: absolute;
@@ -168,10 +172,50 @@ body {
 
 .banner p {
     color: azure;
-    margin: 20px;
+    margin: 30px 0;
+    font-size: 1.2rem;
     animation-name: anim;
     animation-duration: 2s;
 }
+
+.social-icon {
+    color: #fff;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    animation-name: anim;
+    animation-duration: 2s;
+
+}
+
+.banner button{
+    width: 13rem;
+    height: 3rem;
+    background-color: var(--main-color);
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+   margin-top: 30px;
+    animation-name: anim;
+    animation-duration: 3s;
+}
+
+/*.social-icon i {*/
+/*    padding-right: 3.5rem*/
+/*}*/
+
+.social-icon i:hover {
+    transition-duration: 2s;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
 
 @keyframes anim {
     0% {
@@ -188,6 +232,11 @@ body {
 
 
 /* about us */
+.about-us {
+    /*width: 100%;*/
+    /*background-color: #f5f5f5;*/
+    /*padding-bottom: 15rem;*/
+}
 
 .services {
     width: 100%;
@@ -210,7 +259,7 @@ body {
 
 .service:nth-child(2) {
     grid-column: 3 / 6;
-    grid-row: 3 / 5;
+    grid-row: 3 / 4;
 }
 
 .service:nth-child(3) {
@@ -285,6 +334,8 @@ body {
 
 /* FAQ */
 
+
+
 .faq-heading {
     text-align: center;
     font-size: 3rem;
@@ -292,21 +343,20 @@ body {
 }
 
 .faq-container {
-    width: 80%;
+    width: 90%;
     margin: 7rem auto;
 }
 
 .accordion {
-    background-color: #ccc;
-    color: black;
-
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 22px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 18px;
     transition: 0.4s;
 }
 
@@ -334,4 +384,240 @@ body {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+.panel p {
+    padding: 17px;
+    /*background-color: var(--light-color);*/
+    /*color: white;*/
+}
 /* end of FAQ */
+
+/* projects */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.projects img {
+    width: 20%;
+    box-shadow: 5px 8px 20px #444;
+}
+
+/* end of projects */
+
+/* contact form */
+
+
+/*contact form*/
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    width: 60%;
+    height: 40rem;
+    display: flex;
+    box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-left {
+    width: 35%;
+    background: linear-gradient(rgba(15, 15, 15, 0.4), rgba(22, 22, 22, 0.7)),
+    url(images/robin-kutesa-wmhhsI7GUQ8-unsplash.jpg) center no-repeat;
+    background-size: cover;
+}
+@media(max-width: 930px) {
+    .contact-wrapper {
+        width: 90%;
+    }
+}
+
+.contact-right {
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+
+.contact-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #272727;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media(max-width: 600px) {
+    .contact-left {
+        display: none;
+    }
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+}
+
+.contact-right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.field {
+    width: 22rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid #636363;
+    margin: 1rem 0;
+    padding: 1rem 1rem 1rem 0;
+    font-size: 1.5rem;
+    color: #4b4b4b;
+}
+
+.input-group input {
+    height: 3rem;
+}
+
+.input-group textarea {
+    max-height: 7rem;
+    max-width: 35rem;
+}
+
+.field:focus {
+    border-bottom-style: solid;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    color: #4b4b4b;
+    padding-bottom: .7rem;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-label {
+    bottom: 2rem;
+}
+
+.message {
+    bottom: 6rem;
+}
+
+.field:focus ~ label {
+    transform: translateY(-.7rem);
+    font-size: 0.8rem;
+}
+
+.submit-btn {
+    width: 80%;
+    height: 3rem;
+    background-color: var(--second-color);
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+
+/* end of contact form */
+
+/* footer */
+
+.brands-container {
+    width: 100vw;
+    background-color: var(--main-color);
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.brand-img {
+    margin: 3rem;
+}
+
+footer {
+    width: 100vw;
+    background-color: black;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+.footer-title {
+    width: 250px;
+}
+
+.footer-title p {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5rem;
+    color: #fff;
+}
+
+
+.footer-contact a{
+    color: white;
+}
+
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+}
+
+
+/* end of footer */
+
+
+@media (max-width: 1000px) {
+.about-us-img-wrapper {
+    width: 300px;
+}
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 25rem;
+        /*margin-bottom: 6rem;*/
+    }
+}

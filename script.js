@@ -25,3 +25,18 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+
+// phone
+
+
+document.getElementById("phone").onmouseover = function() {mouseOver()};
+document.getElementById("phone").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+    document.querySelector(".fa-hover").classList.add("fa-spin");
+}
+
+function mouseOut() {
+    document.querySelector(".fa-hover").classList.remove("fa-spin");
+}
