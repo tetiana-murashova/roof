@@ -179,7 +179,7 @@ body {
 }
 
 .social-icon {
-    color: #fff;
+
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     font-size: 2rem;
     width: 300px;
@@ -187,7 +187,9 @@ body {
     justify-content: space-around;
     animation-name: anim;
     animation-duration: 2s;
-
+}
+.social-icon a{
+    color: #fff;
 }
 
 .banner button{
@@ -206,9 +208,6 @@ body {
     animation-duration: 3s;
 }
 
-/*.social-icon i {*/
-/*    padding-right: 3.5rem*/
-/*}*/
 
 .social-icon i:hover {
     transition-duration: 2s;
@@ -332,10 +331,49 @@ body {
 
 /* end of about us */
 
+
+
+/* Location */
+.map {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.map img {
+    width: 380px;
+    height: 230px;
+    margin-bottom: 40px;
+}
+
+.location-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+}
+@media(max-width: 400px) {
+    .location-container {
+        flex-direction: column;
+        width: 320px;
+    }
+    .locations-elements {
+        margin-top: 20px;
+    }
+}
+
+.locations-elements {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* end of Location */
+
+
+
 /* FAQ */
-
-
-
 .faq-heading {
     text-align: center;
     font-size: 3rem;
@@ -387,8 +425,6 @@ body {
 
 .panel p {
     padding: 17px;
-    /*background-color: var(--light-color);*/
-    /*color: white;*/
 }
 /* end of FAQ */
 
@@ -406,8 +442,6 @@ body {
 
 /* end of projects */
 
-/* contact form */
-
 
 /*contact form*/
 
@@ -422,14 +456,14 @@ body {
 
 .contact-wrapper {
     width: 60%;
-    height: 40rem;
+    height: 45rem;
     display: flex;
     box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.5);
 }
 
 .contact-left {
     width: 35%;
-    background: linear-gradient(rgba(15, 15, 15, 0.4), rgba(22, 22, 22, 0.7)),
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
     url(images/robin-kutesa-wmhhsI7GUQ8-unsplash.jpg) center no-repeat;
     background-size: cover;
 }
@@ -482,9 +516,9 @@ body {
     width: 22rem;
     background-color: transparent;
     border: none;
-    border-bottom: 0.2rem solid #636363;
-    margin: 1rem 0;
-    padding: 1rem 1rem 1rem 0;
+    border-bottom: 0.15rem solid #636363;
+    margin: 2rem 0;
+    padding: 4px 6px 4px 0;
     font-size: 1.5rem;
     color: #4b4b4b;
 }
@@ -498,23 +532,19 @@ body {
     max-width: 35rem;
 }
 
-.field:focus {
-    border-bottom-style: solid;
-}
-
 .input-group label {
     position: absolute;
     left: 0;
     font-size: 1rem;
     color: #4b4b4b;
-    padding-bottom: .7rem;
+    padding-bottom: 2rem;
     text-transform: uppercase;
     pointer-events: none;
     transition: all 0.3s;
 }
 
 .input-label {
-    bottom: 2rem;
+    bottom: 4rem;
 }
 
 .message {
@@ -581,8 +611,10 @@ footer a {
 }
 
 .footer-container {
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    width: 90%;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 5rem;
     color: #fff;
@@ -591,6 +623,9 @@ footer a {
 
 .footer-contact a{
     color: white;
+}
+.footer-contact i {
+    margin-right: 16px;
 }
 
 
@@ -601,6 +636,12 @@ footer a {
     height: 150px;
 }
 
+.copyright {
+    height: 50px;
+    width: 280px;
+    padding-bottom: 7px;
+    margin-left: 20px;
+}
 
 /* end of footer */
 
